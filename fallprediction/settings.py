@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'phonenumber_field',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
@@ -100,11 +101,11 @@ WSGI_APPLICATION = 'fallprediction.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
+        'NAME': 'fallprediction',
         'USER': 'postgres',
-        'PASSWORD': 'P4XvHwK5MruJ8LTD94yJ',
-        'HOST': 'containers-us-west-110.railway.app',
-        'PORT': '6436',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
