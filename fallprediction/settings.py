@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w$awa+=fd##v!^#k4(j2hqq&%w7pf2oounw%5=5b(=28i=a70w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     'allauth',
     'allauth.account',
+    'corsheaders',
 
 
     'api.apps.ApiConfig'
@@ -72,6 +73,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
 ]
 
 ROOT_URLCONF = 'fallprediction.urls'
@@ -101,11 +110,11 @@ WSGI_APPLICATION = 'fallprediction.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fallprediction',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': 'WAPEm6RLdZ732IwWrQ5H',
+        'HOST': 'containers-us-west-120.railway.app',
+        'PORT': '6455',
     }
 }
 
