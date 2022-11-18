@@ -102,14 +102,20 @@ WSGI_APPLICATION = 'fallprediction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'g7KKHVMP18V9JRYX7KFS',
+#         'HOST': 'containers-us-west-127.railway.app',
+#         'PORT': '6222',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'g7KKHVMP18V9JRYX7KFS',
-        'HOST': 'containers-us-west-127.railway.app',
-        'PORT': '6222',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
