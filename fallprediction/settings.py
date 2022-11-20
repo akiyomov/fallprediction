@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-w$awa+=fd##v!^#k4(j2hqq&%w7pf2oounw%5=5b(=28i=a70w
 # DEBUG = os.getenv("DEBUG", "False") == "True"
 # DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 # ALLOWED_HOSTS = ['*']
-Debug=False
+Debug=True
 # ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 ALLOWED_HOSTS = ['*']
 
@@ -113,11 +113,11 @@ WSGI_APPLICATION = 'fallprediction.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
+        'NAME': 'aivpredictor',
         'USER': 'postgres',
-        'PASSWORD': 'g7KKHVMP18V9JRYX7KFS',
-        'HOST': 'containers-us-west-127.railway.app',
-        'PORT': '6222',
+        'PASSWORD': 'AIVectors',
+        'HOST': 'aivactivity.cqfhltnsk01m.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 # if DEVELOPMENT_MODE is True:

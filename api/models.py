@@ -10,6 +10,7 @@ class PersonDetails(models.Model):
     mobile_number = models.BigIntegerField(blank=True, null=True)
 
     class Meta:
+        managed = False
         db_table = 'person_details'
     
     def __str__(self):
@@ -21,6 +22,7 @@ class CameraDetails(models.Model):
     created_at = models.DateTimeField(auto_now_add=True,blank=True, null=True)
 
     class Meta:
+        managed = False
         db_table = 'camera_details'
 
     def __str__(self):
@@ -31,6 +33,7 @@ class ActivityDetails(models.Model):
     created_at = models.DateTimeField(auto_now_add=True,blank=True, null=True)
 
     class Meta:
+        managed = False
         db_table = 'activity_details'
     
     def __str__(self):
@@ -44,6 +47,7 @@ class ActivityRecord(models.Model):
     created_at = models.DateTimeField(blank=True, null=True)
 
     class Meta:
+        managed = False
         db_table = 'activity_record'
 
 class AnomalyVideoPaths(models.Model):
@@ -54,6 +58,7 @@ class AnomalyVideoPaths(models.Model):
     video_path = models.CharField(max_length=255)
 
     class Meta:
+        managed = False
         db_table = 'anomaly_video_paths'
 
 
